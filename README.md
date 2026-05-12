@@ -1,31 +1,28 @@
-# MoneyManage Frontend
+# MoneyManage API
 
-Frontend application for the MoneyManage personal finance management system.
+Backend API for the MoneyManage personal finance application.
 
 ## Tech Stack
-- **Framework:** Angular 17
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide Angular
+- **Framework:** .NET 10
+- **Database:** PostgreSQL via Entity Framework Core (Npgsql)
+- **API Style:** REST
 
 ## Key Features
-- Dashboard with financial overview.
-- Account management interface.
-- Transaction tracking and visualization.
+- Account management (initial balance, tracking).
+- Transaction management with automatic balance updates.
+- Category-based financial tracking (Income/Expense).
 
 ## Getting Started
-### Install Dependencies
+### Build
 ```bash
-npm install
+dotnet build -c Debug
 ```
 
-### Run Development Server
+### Run
 ```bash
-npm start
-# or
-ng serve
+dotnet run --project MoneyManage.Api.csproj
 ```
 
-### Build Production
-```bash
-npm run build
-```
+### Database Migrations
+- Add migration: `dotnet ef migrations add <MigrationName>`
+- Update database: `dotnet ef database update`
